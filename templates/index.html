@@ -1,0 +1,71 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+{% block content %}
+<section class="content-sm container-p">
+    <div class="container-social">
+        <i class="uil uil-github redes_social"></i>
+        <i class="uil uil-linkedin redes_social"></i>
+        <i class="uil uil-twitter redes_social"></i>
+    </div>
+    <div>
+        <img
+        class="img-perfil"
+        src="{% static 'assets/perfil-2.jpg' %}"
+        alt="foto-perfil"
+        />
+    </div>
+    <div>
+        <h1>Hi, I'm <span class="color-name">José Camilo</span></h1>
+        <p id="animation"></p>
+    </div>
+    <a class="btn-p btn-contact" href="{% url 'portfolio:contac' %}">Contact me</a>
+</section>
+
+<section class="about content-sm">
+  <h2>About Me</h2>
+  <div class="grid-perfil">
+    <div>
+      <img
+        class="img-perfil"
+        src="{% static 'assets/perfil-2.jpg' %}"
+        alt="foto-perfil"
+      />
+    </div>
+    <div class="bio-perfil">
+      <p>
+        Hello, my name is José Camilo Rodríguez Vera. I am a junior FullStack
+        Web Developer (no experience), I have 3 years as a self-taught, in this
+        time I have acquired skills and knowledge necessary to be able to work
+        together on a project.
+      </p>
+      <p>
+        Throughout this time I have created several personal projects using
+        (HTML, CSS, Javascript, Python, Django, React).
+      </p>
+      <p>
+        I am passionate about learning and exploring new technologies, I want to
+        gain more knowledge and also work experience, with a positive attitude
+        and eager to keep trying to reach my goal since the first day I touched
+        code, "Improve my life and the lives of my family...".
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="content-grid">
+  <h2>My Squills</h2>
+  <div class="img-squills">
+    <img src="{% static 'assets/img-squills/html5.png' %}" alt="logo-html5" />
+    <img src="{% static 'assets/img-squills/css3.png' %}" alt="logo-css3" />
+    <img src="{% static 'assets/img-squills/js.png' %}" alt="logo-js" />
+    <img src="{% static 'assets/img-squills/python.png' %}" alt="logo-python" />
+    <img src="{% static 'assets/img-squills/django.png' %}" alt="logo-django" />
+    <img src="{% static 'assets/img-squills/react.png' %}" alt="logo-react" />
+    <img
+      src="{% static 'assets/img-squills/postgre.png' %}"
+      alt="logo-postgre"
+    />
+  </div>
+</section>
+{% endblock content %}

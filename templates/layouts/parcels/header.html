@@ -1,0 +1,17 @@
+{% load static %}
+<div class="container-p">
+    <div class="logo">
+        <a href="{% url 'home' %}">{José Camilo;}</a>
+    </div>
+    <nav id="nav-bar" class="nav-bar">
+        <ul>
+            <li><a class="nav-link" href="{% url 'home' %}">HOME</a></li>
+            <li><a class="nav-link" href="{% url 'portfolio:portfolio' %}">PORTFOLIO</a></li>
+            <li><a class="nav-link" href="{% url 'portfolio:contac' %}">CONTACT ME</a></li>
+            <li><a class="nav-link" href="{% url 'portfolio:download' %}">DOWNLOAD RESUME</a></li>
+        </ul>
+    </nav>
+    <div id="hamburg" class="hamburg">
+        <img src="{% static 'assets/justify.svg' %}" alt="logo-hamburguesa">
+    </div>
+</div>

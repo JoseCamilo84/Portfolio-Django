@@ -1,0 +1,15 @@
+{% extends 'layouts/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} Contac me {% endblock title %}
+
+{% block content %}
+    <section class="section-contact">
+        <h1>Contac me</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button class="btn-p" type="submit">Send</button>
+        </form>
+    </section>
+{% endblock content %}
