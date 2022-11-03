@@ -19,7 +19,8 @@ DEBUG = env.bool("DEBUG", default=False)
 
 # CSRF_TRUSTED_ORIGINS = ['https://portfolio-django-production-614b.up.railway.app']
 
-ALLOWED_HOSTS = ['up.railway.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['http://portfolio-django-production-614b.up.railway.app', 'https://portfolio-django-production-614b.up.railway.app',
+                 'up.railway.app', 'localhost', '127.0.0.1']
 
 
 # Application definition
