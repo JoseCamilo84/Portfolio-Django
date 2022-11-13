@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.core.mail import EmailMessage
 from django.contrib import messages
+from django.conf import settings
 from .forms import ContacForm
 
 
@@ -10,21 +11,24 @@ def portfolio(request):
 
 def contac(request):
     form = ContacForm(request.POST or None)
-    instance = form.save(commit=False)
-    if form.is_valid():
-        subject = [instance.subject]
-        email = [instance.email]
-        phone = [instance.phone]
-        message = [instance.message]
 
-        email_message = EmailMessage(subject, email, phone, message)
+    if form.is_valid():
+        instance = form.save(commit=False)
+        messages.success(request, 'Thanks for contacting me')
+
+        subject = instance.subject
+        from_email = instance.email
+        # phone = instance.phone
+        html_message = instance.message
+        to_email = [settings.EMAIL_HOST_USER]
+
+        email_message = EmailMessage(
+            subject, html_message, from_email, to_email)
         email_message.content_subtype = 'html'
         email_message.send()
-        messages.success(request, 'Gracias por contactarte conmigo')
 
     return render(request, 'contac.html', {'form': form})
 
 
 def download(request):
     return render(request, 'download.html', {})
-

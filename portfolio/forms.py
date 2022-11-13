@@ -1,7 +1,13 @@
-from django import forms
+from django.forms import ModelForm
+from .models import MessageUser
 
-class ContacForm(forms.Form):
-    subject = forms.CharField(max_length=100)
-    email = forms.EmailField()
-    phone = forms.CharField(max_length=10)
-    message = forms.CharField(widget=forms.Textarea)
+
+class ContacForm(ModelForm):
+    class Meta:
+        model = MessageUser
+        fields = [
+            'subject',
+            'email',
+            'phone',
+            'message'
+        ]

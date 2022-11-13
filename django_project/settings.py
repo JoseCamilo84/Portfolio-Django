@@ -134,3 +134,6 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Este es el backend del correo electronico
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+# Este es el correo destino
+EMAIL_HOST_USER = 'jrodriguez_131@hotmail.com'

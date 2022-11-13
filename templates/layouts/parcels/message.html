@@ -1,0 +1,20 @@
+{% if messages %}
+    <article class="modal-contact">
+    {% for message in messages %}
+        <div class="modal-contenido">
+            <div class="modal-cabecera">
+                <div class="modal-svg">
+                    <svg width="50px" height="50px" x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <p>{{ message.tags }}</p>
+            </div>
+            <div class="modal-body">
+                <p>{{ message }}</p>
+                <a class="btn-p btn-modal" href="">Ok</a>
+            </div>
+        </div>
+    {% endfor %}
+    </article>
+{% endif %}
