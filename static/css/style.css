@@ -9,6 +9,8 @@
   --color-aux: #f6f7f8;
   --height-header: 60px;
   --color-hover: #90aaff;
+  --color-transparent-green: rgba(120, 255, 102, 0.237);
+  --color-transparent: rgba(136, 136, 136, 0.355);
 }
 
 * {
@@ -502,6 +504,59 @@ h3 {
   border: none;
   padding-left: 103px;
   padding-right: 103px;
+}
+
+/********** End Settings **********/
+
+/********** Settings Contact Me **********/
+.modal-contact {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-transparent);
+  z-index: 999;
+}
+
+.modal-contenido {
+  width: 360px;
+  /* height: 250px; */
+  border-radius: 10px;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  padding: 30px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+.btn-modal {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+.modal-cabecera {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: 20px; */
+}
+
+.modal-svg {
+  background-color: var(--color-transparent-green);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.modal-body p {
+  text-align: center;
 }
 
 /********** End Settings **********/
