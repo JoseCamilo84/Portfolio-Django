@@ -437,6 +437,7 @@ h3 {
   border-radius: 20px;
   background-color: var(--color-background);
   color: var(--color-secundary);
+  cursor: pointer;
 }
 
 .card-folio img {
@@ -466,6 +467,16 @@ h3 {
 
 .description-folio:hover {
   opacity: 90%;
+}
+
+.link-folio {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.link-folio a {
+  text-decoration: none;
 }
 
 .description-folio h4 {
