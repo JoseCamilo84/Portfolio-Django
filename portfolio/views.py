@@ -27,7 +27,7 @@ def contac(request):
             'message': instance.message
         })
 
-        html_template = instance.message
+        # html_template = instance.message
 
         email_message = EmailMessage(
             subject,
