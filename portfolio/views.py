@@ -20,12 +20,14 @@ def contac(request):
         subject = instance.subject
         from_email = instance.email
         to_email = [settings.EMAIL_HOST_USER]
-        phone = instance.phone
-        html_template = render_to_string('layouts/parcels/email.html', {
-            'phone': phone,
-            'email': from_email,
-            'message': instance.message
-        })
+        # phone = instance.phone
+        # html_template = render_to_string('layouts/parcels/email.html', {
+        #     'phone': phone,
+        #     'email': from_email,
+        #     'message': instance.message
+        # })
+
+        html_template = instance.message
 
         email_message = EmailMessage(
             subject,
