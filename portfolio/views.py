@@ -15,7 +15,7 @@ def contac(request):
 
     if form.is_valid():
         instance = form.save(commit=False)
-        instance.save()
+        # instance.save()
 
         subject = instance.subject
         from_email = instance.email
